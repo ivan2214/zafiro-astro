@@ -1,0 +1,65 @@
+---
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+
+const products = [
+  {
+    name: "Bidón Retornable 20L",
+    description:
+      "Perfecto para hogares y oficinas. Fácil de usar con dispensadores.",
+    image: "/bidon20l.webp",
+  },
+  {
+    name: "Bidón Retornable 10L",
+    description: "Ideal para espacios más pequeños o consumo moderado.",
+    image: "/bidon10l.webp",
+  },
+];
+---
+
+<section id="products" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">
+        Nuestros Productos
+      </h2>
+      <p
+        class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+      >
+        Agua pura para cada necesidad
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <div
+        class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+      >
+        {
+          products.map((product) => (
+            <Card className="overflow-hidden rounded-lg shadow transition-shadow duration-500 transform hover:shadow-2xl">
+              <CardHeader className="p-0">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  class="w-full object-cover aspect-auto"
+                />
+              </CardHeader>
+              <CardContent className="p-4 flex flex-col justify-between items-start gap-2">
+                <CardTitle className="text-2xl">{product.name}</CardTitle>
+                <CardDescription className="text-base">
+                  {product.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

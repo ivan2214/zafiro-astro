@@ -1,0 +1,38 @@
+---
+// src/components/Contact.astro
+import { Button } from "@/components/ui/button";
+import IconWhatsApp from "@/icons/IconWhatsApp.astro";
+---
+
+<section id="contact" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        ¡Haz tu pedido ahora y experimenta la diferencia de Zafiro!
+      </h2>
+      <p class="mt-4 text-xl text-gray-500">
+        Estamos a solo un mensaje de distancia. Contáctanos por WhatsApp y
+        disfruta de agua pura en tu hogar.
+      </p>
+    </div>
+    <div class="mt-10">
+      <div class="flex justify-center">
+        <a
+          href="https://wa.me/3816219419?text=Hola,%20quiero%20más%20información%20sobre%20sus%20bidones%20de%20agua"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:text-lg animate-pulse"
+        >
+          <IconWhatsApp className="w-5 h-5 mr-2" />
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-base text-gray-500">
+        Horario de atención: Lunes a Sábado de 9:00 AM a 6:00 PM
+      </p>
+      <p class="mt-2 text-base text-gray-500">Teléfono: (+54) 9 3816219419</p>
+    </div>
+  </div>
+</section>

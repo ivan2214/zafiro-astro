@@ -1,0 +1,63 @@
+---
+import { Card, CardContent } from "@/components/ui/card";
+
+const benefits = [
+  {
+    title: "Agua 100% pura y natural",
+    description:
+      "Extraída de manantiales naturales, garantizamos la máxima pureza en cada gota.",
+    icon: "💧",
+  },
+  {
+    title: "Entrega rápida y confiable",
+    description:
+      "Nuestro servicio de entrega asegura que nunca te quedes sin agua fresca.",
+    icon: "🚚",
+  },
+  {
+    title: "Compromiso con el medio ambiente",
+    description:
+      "Utilizamos bidones retornables para reducir el impacto ambiental.",
+    icon: "🌿",
+  },
+];
+---
+
+<section id="benefits" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">
+        Beneficios
+      </h2>
+      <p
+        class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+      >
+        ¿Por qué elegir Zafiro?
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <div
+        class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10"
+      >
+        {
+          benefits.map((benefit) => (
+            <Card className="shadow transition-shadow duration-500 transform hover:shadow-2xl">
+              <CardContent className="p-6">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                  <span class="text-2xl">{benefit.icon}</span>
+                </div>
+                <h3 class="mt-4 text-lg leading-6 font-medium text-gray-900">
+                  {benefit.title}
+                </h3>
+                <p class="mt-2 text-base text-gray-500">
+                  {benefit.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

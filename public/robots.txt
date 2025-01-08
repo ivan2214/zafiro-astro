@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zafiro.vercel.app/sitemap-index.xml
+Sitemap: https://zafirolules.vercel.app/sitemap-index.xml

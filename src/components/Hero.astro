@@ -1,6 +1,7 @@
 ---
 // src/components/Hero.astro
 import { Button } from "@/components/ui/button";
+import { Image } from "astro:assets";
 ---
 
 <section class="relative mt-20 bg-white overflow-hidden">
@@ -40,7 +41,10 @@ import { Button } from "@/components/ui/button";
     </div>
   </div>
   <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <img
+    <Image
+      width={1920}
+      height={1080}
+      loading="eager"
       class="h-56 w-full object-cover aspect-auto sm:h-72 md:h-96 lg:w-full lg:h-full rounded"
       src="/hero-image.webp"
       alt="Bidón de agua Zafiro"

@@ -2,6 +2,7 @@
 // src/components/Header.astro
 import { Button } from "@/components/ui/button";
 import IconWhatsApp from "@/icons/IconWhatsApp.astro";
+import { Image } from "astro:assets";
 ---
 
 <header class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
@@ -10,9 +11,16 @@ import IconWhatsApp from "@/icons/IconWhatsApp.astro";
       class="flex justify-between items-center py-4 md:justify-start md:space-x-10"
     >
       <div class="flex justify-start lg:w-0 lg:flex-1">
-        <a href="#">
+        <a href="/">
           <span class="sr-only">Zafiro</span>
-          <img class="h-8 w-auto sm:h-10" src="/logo.webp" alt="Zafiro Logo" />
+          <Image
+            loading="eager"
+            width={1920}
+            height={1080}
+            class="h-8 w-auto sm:h-10"
+            src="/logo.webp"
+            alt="Zafiro Logo"
+          />
         </a>
       </div>
       <nav class="hidden md:flex space-x-10">

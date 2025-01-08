@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 // src/components/About.astro
 ---
 
@@ -34,9 +36,11 @@
       </div>
 
       <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-        <img
+        <Image
           class="relative mx-auto rounded-lg shadow-lg aspect-auto"
-          width="490"
+          width={1920}
+          height={1080}
+          loading="lazy"
           src="/bidones.webp"
           alt="Fuente de agua Zafiro"
         />
